@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.languageconverter"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.languageconverter"
@@ -50,7 +50,7 @@ android {
 }
 
 dependencies {
-
+    implementation ("com.google.mlkit:translate:17.0.3")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
