@@ -12,6 +12,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -23,9 +24,9 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.ViewModel
 
 @Composable
-fun TranslationApp() {
-    val viewModel= TranslationViewModel(Application())
-    val modelStatus by viewModel.modelStatus
+fun TranslationApp(viewModel: TranslationViewModel) {
+
+    val modelStatus by viewModel.modelStatus.collectAsState()
     val translatedText by viewModel.translatedText
 
     Column(
@@ -51,7 +52,7 @@ fun TranslationApp() {
         )
 
         // Model status (downloading, ready, or error)
-        Text(text = "Model Status: $modelStatus")
+       // Text(text = "Model Status: $modelStatus")
 
         // Button to trigger translation
         Button(

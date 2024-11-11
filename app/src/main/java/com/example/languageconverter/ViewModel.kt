@@ -5,12 +5,14 @@ import android.speech.tts.TextToSpeech
 import android.view.translation.Translator
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.mlkit.common.model.DownloadConditions
 import com.google.mlkit.nl.translate.TranslateLanguage
 import com.google.mlkit.nl.translate.Translation
 import com.google.mlkit.nl.translate.TranslatorOptions
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.suspendCancellableCoroutine
 import kotlinx.coroutines.withContext
@@ -19,13 +21,13 @@ import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
 
 
-class TranslationViewModel(application: Application) : AndroidViewModel(application){
+class TranslationViewModel(application: Application) : ViewModel(){
 
     private var translator: com.google.mlkit.nl.translate.Translator? = null
     private val _translatedText = mutableStateOf("")
     val translatedText = _translatedText
 
-    val modelStatus = mutableStateOf("Initializing...")  // To track download status and errors
+    val modelStatus = MutableStateFlow("Initializing...")  // To track download status and errors
     var inputText = ""
 
     private var textToSpeech: TextToSpeech? = null
@@ -112,4 +114,3 @@ class TranslationViewModel(application: Application) : AndroidViewModel(applicat
         translator?.close()
     }
 }
-
