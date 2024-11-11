@@ -24,7 +24,7 @@ import kotlin.coroutines.resumeWithException
 class TranslationViewModel(application: Application) : ViewModel(){
 
     private var translator: com.google.mlkit.nl.translate.Translator? = null
-    private val _translatedText = mutableStateOf("")
+    private val _translatedText = mutableStateOf("hey asa")
     val translatedText = _translatedText
 
     val modelStatus = MutableStateFlow("Initializing...")  // To track download status and errors
