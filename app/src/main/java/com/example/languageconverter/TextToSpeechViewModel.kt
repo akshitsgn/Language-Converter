@@ -20,7 +20,7 @@ class TextToSpeechViewModel(application: Application) : AndroidViewModel(applica
 
     override fun onInit(status: Int) {
         if (status == TextToSpeech.SUCCESS) {
-            val result = tts?.setLanguage(Locale("hi"))
+            val result = tts?.setLanguage(Locale("CN"))
             if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
                 println("Hindi language is not supported on this device.")
             }
