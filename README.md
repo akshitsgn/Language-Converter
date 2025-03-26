@@ -3,6 +3,16 @@
 ## 🔍 Project Overview
 An **Offline Language Converter** tailored for the **Indian Army** to facilitate seamless communication across diverse linguistic regions without requiring an internet connection.
 
+## 📱 App Screenshots
+
+![image alt](https://raw.githubusercontent.com/akshitsgn/Language-Converter/6791e1aafa068b3524ad8b08ddece9672ee764f6/2e2ccada-5f25-4043-a713-a5289325b7d7.jpg)  
+*Home Screen*
+
+![image alt](https://github.com/akshitsgn/Language-Converter/blob/master/0fb4eaa4-f39e-4f00-92aa-7c5226bafa98.jpg?raw=true)  
+*Language Selection*
+
+![image alt](https://github.com/akshitsgn/Language-Converter/blob/master/494a54c4-1bf8-4d8e-917a-26047e813705.jpg?raw=true)  
+*Translation Result
 
 ## ✨ Key Features
 - 🌐 **Offline Functionality**: Works efficiently without internet access.
